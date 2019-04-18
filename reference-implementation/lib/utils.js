@@ -7,6 +7,9 @@ const FETCH_SCHEMES = new Set(['http', 'https', 'ftp', 'about', 'blob', 'data', 
 // Tentative, so better to centralize so we can change in one place as necessary (including tests).
 exports.BUILT_IN_MODULE_SCHEME = 'std';
 
+// Useful for comparing to .protocol
+exports.BUILT_IN_MODULE_PROTOCOL = `${exports.BUILT_IN_MODULE_SCHEME}:`;
+
 exports.tryURLParse = (string, baseURL) => {
   try {
     return new URL(string, baseURL);
